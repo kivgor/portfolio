@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/portfolio/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla App Template</title>
+    <script type="module" crossorigin src="/portfolio/assets/vendor-BJFKJSte.js"></script>
+    <script type="module" crossorigin src="/portfolio/assets/main-BoOjp8K9.js"></script>
+    <link rel="stylesheet" crossorigin href="/portfolio/assets/vendor-wjhWB3DI.css">
+    <link rel="stylesheet" crossorigin href="/portfolio/assets/styles-BKnyKL5X.css">
+  </head>
+  <body>
+    <!-- <header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a class="nav-logo" href="./index.html" aria-label="Site logo">
+        <svg class="nav-logo-icon" width="100" height="30">
+          <use href="img/sprite.svg#logo"></use>
+        </svg>
+      </a>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+ -->
+
+    <main>
+      <!-- Loads the specified .html file -->
+      <div class="container">
+  <h2 class="review-title">REVIEWS</h2>
+  <div class="swiper">
+    <ul class="swiper-wrapper">
+
+      <li class="swiper-slide">
+        <p class="review-text">
+          Work with was extraordinary! He turned out to be a very competent and
+          responsible specialist. The projects were completed on time and the
+          result exceeded my expectations.
+        </p>
+        <div class="review-thumb">
+          <img class="review-avatar" src="data:image/png;base64,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" alt="Autor: Natalia Shevchenko">
+          <p class="review-author">Natalia Shevchenko</p>
+        </div>
+      </li>
+
+      <li class="swiper-slide">
+        <p class="review-text">
+          I have the honor to recommend him as an exceptional professional in
+          his field. His knowledge and expertise are undeniable. Cooperation
+          with him always brings impressive results. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequuntur exercitationem ea porro nostrum quae error architecto laboriosam reprehenderit nulla?
+        </p>
+        <div class="review-thumb">
+          <img class="review-avatar" src="data:image/png;base64,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" alt="Autor: Dmytro Nazarenko">
+          <p class="review-author">Dmytro Nazarenko</p>
+        </div>
+      </li>
+            
+      <li class="swiper-slide">Slide 3</li>
+      <li class="swiper-slide">Slide 4</li>
+      <li class="swiper-slide">Slide 5</li>
+      <li class="swiper-slide">Slide 6</li>
+    </ul>
+  </div>
+
+  <div class="review-arrow-thumb">
+    <img class="swiper-button-prev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAI3SURBVHgB7ZrBcZtAFIbfW0vi6qssaQIdKBVEqsDuwCkhqUB2BXEHsSsIqUBOBVYqgAwLHJMrMOblPWx5NIwvHhDLjvkOQtLq8P/afcvu/iDUiKJ0hUjnqPCCiFzoBzsA2hV5fu15XnjYMNq/CYLgdDQeX7H4SwS6QYDVbHb2B3qA1nrJl+XEcbY6Sfwiy8TIP2lDeRHx48lkyx92eZ5/3Tf2jUqn42yAaMW9sX7RGWl9wy6/gSXoOL7lnqj0jtI0dR9LOi/y7CNYAv/7X8YTJ4ii6CfGcfqdCO7n8+kdWATr3vAkc6oIiAvk8TdYhlJwxxV8weMpIbAU0a7AcgYDphkMmGYwYJrBgGlG0DKyOCyJtry+gvnszIMj02oPHIh3oSNaM1ATH/LyfA0d0IqB18TX967HorEBk+KFRgZMixcazUK1gnVlm8drdHgjYZPZ6n3fBxTiugSzQ6hRD0yn01BMIEIIT0Noy2c3LnRI4yFk2kQrNWDSRGtF/JoJ6IBWZ6GaiU5ofTUqJvhy9FXonmFDY5rBgGkGA6YZDJjGfgOIGCZJ8gEs4zk73klG5hPhZ7CPpaT3yFHlCpX6wdGl19eAu44E3pzaP+RZtlaLxeIeEG85qbcm6JZHIqgsfdm+VkUszx4A4FLSb3EHPUW0SUrPdfupKIpr+a4yIENnfxTIG5EHrdPL5yLpBUGQulEcX8mxDRD9PXxOAus/rg6rStg8BeDQCxMsMuSTD//kBH3eb/w6bPsPCShDBXryZwAAAAAASUVORK5CYII=" alt="left">
+    <img class="swiper-button-next" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAI6SURBVHgB7Zq/TsJQFMZPqQRpGCQBEgKJdSABpuvkik+gb6C+AW5uyhPI6IiTccMnUDfZcIKBhLoxkU78SwC/Q8AgcVCwt73aX0LvLS3J992e3p7LqUYrZLPZgqZpR+ge42OSN6hDU30ymZSazaa1fEBbdEzT3DEM4wrdE5xYxg8qjUbjjTxAPp8X0CSg6RK71X6/X7Isy+ZjMwMsPhwOP7LLXq93vjjoNYQQO8PhkE0UYOLwQycclnO53DUpArRWFnq3EPPmdDo9gqN9UoRQKFQcjUZtaH/QE4nENQxUWq1WjRSh0+kM4vH4NroiwJvxePxKioGb+pZ4pkQsTUlRWHuAFMc34Da+AbfxDbiNb8BttkgCeGK2uUXOdbi6INkUmVfAxHrjkbNf+kWkGOCRR2ORAyakGOCwccqEtBByyoTUWcgJExvNQvPZxaT1mZlAu0dr8r+fA/jf6McjxyEzH3UTn0VIrY3UK/CV+E0fbNIMOCGekWLAKfGMFANOiWdk3gOWE8mclGx0ndnqu/gLGrfxDbiNb8BtfANu8ycMWFhZ7ZJiZDIZgabOBqrIUU5JMXRdF9BdD2DzgGyxyMVuUgTWOq/alwLIDp/QqRiGoUyhe/5KRJUzW52/SKfTNZRaL2KxWDYSidRs2x6QB+GRTyaTN+geoDB/xjpnBrhwnEql7mGiEAwGyzBiR6NRrdvtdsgD8IoOBfkitN1h94XFf3rZY/VkNJeIMb7LBXkDC4XtKjRx2DwvH3gHm5ULCZsovEcAAAAASUVORK5CYII=" alt="right">
+  </div>
+</div>
+      
+    </main>
+
+    <!-- <footer class="footer">
+  <div class="container">
+    <p class="footer-desc">
+      Made with ✨ by
+      <a
+        class="footer-link"
+        href="https://goit.global/ua/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GoIT team
+      </a>
+    </p>
+  </div>
+</footer>
+ -->
+
+  </body>
+</html>
