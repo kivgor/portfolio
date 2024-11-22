@@ -61,36 +61,33 @@
     height: auto;
 }
 
-.btn {
+.btn-thumb {
     position: relative;
+    display: flex;
+    justify-content: right;
+    gap: 16px;
 }
 
 .swiper-button-next {
-    position: absolute;
-    top: 24px;
-    right: 0;
+    position: static;
+    margin-top: 24px;    
     width: 40px;
-    height: 40px;
-    margin-top: 0px;
+    height: 40px;    
   }  
   
   .swiper-button-prev {
-    position: absolute;
-    top: 24px;
-    left: auto;
-    right: 60px;
+    position: static;
+    margin-top: 24px;
     width: 40px;
-    height: 40px;
-    margin-top: 0px;
+    height: 40px;    
   }
-
 
 @media only screen and (min-width: 768px) {
     .container {
         max-width: 768px;
         padding: 0 32px;
     }
-    
+
     .review-title {
         font-size: 108px;
         line-height: 1.14815;
@@ -104,8 +101,13 @@
         max-width: 1280px;
         width: 1216px;        
     }
+
     .review-title {            
         margin-bottom: 80px;
+    }
+
+    .btn-thumb {            
+        gap: 24px;
     }
 
     .swiper-button-next {            
