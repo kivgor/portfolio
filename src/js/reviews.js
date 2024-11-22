@@ -11,16 +11,23 @@ import axios from 'axios';
 
 export async function loadReviews() {
   await axios
-    .get('https://portfolio-js.b.goit.study/api/reviews')
+    .get('https://portfolio-js.b.goit.study/api/reviews1')
     .then(response => {
       createGallery(response.data);
     })
-    .catch(error => console.log(error));
+    .catch(error => {
+      // console.log(error);
+      iziToastMes('Reviews not found');
+      const gallery = document.querySelector('.swiper-wrapper'); 
+      gallery.insertAdjacentHTML(
+        'beforeend',
+        '<li class="not-found"><p class="not-found-text">Not Found</p></li>'
+      );
+    });
 }
 
 function createGallery(data) {
-  const gallery = document.querySelector('.swiper-wrapper');
-  console.log(data);
+  const gallery = document.querySelector('.swiper-wrapper');  
   let markup = data
     .map(
       slide => `
@@ -58,5 +65,22 @@ export function launchSwiper() {
     breakpoints: {
       1280: { slidesPerView: 2 },
     },
+  });
+}
+
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
+function iziToastMes(message, color = 'red') {
+  iziToast.show({
+    icon: 'icon-person',
+    message: message,
+    color: color,
+    position: 'topRight', // bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter, center
+    transitionIn: 'bounceInDown', // bounceInLeft, bounceInRight, bounceInUp, bounceInDown, fadeIn, fadeInDown, fadeInUp, fadeInLeft, fadeInRight or flipInX
+    transitionOut: 'flipOutX', // fadeOut, fadeOutUp, fadeOutDown, fadeOutLeft, fadeOutRight, flipOutX
+    closeOnClick: true,
+    displayMode: 'replace', // once, replace
+    timeout: 3000,
   });
 }

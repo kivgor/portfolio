@@ -121,3 +121,15 @@
     }
 }
 
+.not-found {
+    width: 100%;    
+    background-color: #e4e5e6;
+    border-radius: 16px;
+    padding: 32px;
+    box-sizing: border-box;
+    text-align: center;        
+}
+
+.not-found-text {
+    font-size: 18px;     
+}
