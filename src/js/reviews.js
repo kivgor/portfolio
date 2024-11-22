@@ -40,8 +40,7 @@ function createGallery(data) {
 
 export function launchSwiper() {  
   const swiper = new Swiper('.swiper', {
-    modules: [Navigation, Pagination, Keyboard, Mousewheel],
-    cssMode: true,
+    modules: [Navigation, Pagination, Keyboard, Mousewheel],    
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
