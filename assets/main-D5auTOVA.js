@@ -8,4 +8,4 @@ import{a as n,S as l,N as c,P as u,K as p,M as d}from"./vendor-CTgxc8tz.js";(fun
           <p class="review-author">${o.author}</p>
         </div>
       </li>`).join("");i.insertAdjacentHTML("beforeend",s)}function m(){new l(".swiper",{modules:[c,u,p,d],cssMode:!0,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},pagination:{el:".swiper-pagination",clickable:!0},keyboard:{enabled:!0,onlyInViewport:!1,pageUpDown:!0},mousewheel:{enabled:!0},slidesPerView:2,spaceBetween:32})}f();m();
-//# sourceMappingURL=main-K-GBcpwx.js.map
+//# sourceMappingURL=main-D5auTOVA.js.map
