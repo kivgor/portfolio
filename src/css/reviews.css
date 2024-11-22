@@ -10,22 +10,16 @@
     margin-bottom: 80px;
 }
 
-.swiper {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-wrapper { 
-    height: 100%;
-}
-
-.swiper-slide {
+.swiper-slide {    
     background-color: #e4e5e6;
     min-width: 300px;
     border-radius: 16px;
     padding: 32px;
-    box-sizing: border-box;   
-    height: 100%; /* Почему не работает? */
+    box-sizing: border-box;      
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+    height: auto;
 }
 
 .review-text {
@@ -46,6 +40,7 @@
 
 .review-avatar {
     width: 40px;
+    border-radius: 50%;
 }
 
 .review-author {
