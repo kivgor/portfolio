@@ -39,17 +39,13 @@ function createGallery(data) {
 }
 
 export function launchSwiper() {  
-  const swiper = new Swiper('.swiper', {    
+  const swiper = new Swiper('.swiper', {
     modules: [Navigation, Pagination, Keyboard, Mousewheel],
     cssMode: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
+    },    
     keyboard: {
       enabled: true,
       onlyInViewport: false,
@@ -58,7 +54,10 @@ export function launchSwiper() {
     mousewheel: {
       enabled: true,
     },
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 32,
+    breakpoints: {
+      1280: { slidesPerView: 2 },
+    },
   });
 }
