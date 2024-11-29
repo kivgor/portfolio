@@ -1,24 +1,46 @@
 import Swiper from 'swiper';
-import { Keyboard, Mousewheel, Navigation, Pagination } from 'swiper/modules';
+import { Keyboard, Mousewheel, Navigation} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import 'swiper/css/keyboard';
 import 'swiper/css/mousewheel';
-import '../css/reviews.css';
+import '../css/styles/reviews.css';
 
 import axios from 'axios';
 
-export async function loadReviews() {
+const guard = document.querySelector('.js-load-reviews');
+
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0,
+};
+
+const observer = new IntersectionObserver(handlePagination, options);
+observer.observe(guard);
+function handlePagination(entries, observer) {
+  entries.forEach(async entry => {
+    if (entry.isIntersecting) {
+      observer.unobserve(guard);
+      try {
+        await loadReviews();
+        launchSwiper();
+      } catch (error) {
+        alert(error.message);
+      }
+    }
+  });
+}
+
+async function loadReviews() {
   await axios
-    .get('https://portfolio-js.b.goit.study/api/reviews1')
+    .get('https://portfolio-js.b.goit.study/api/reviews')
     .then(response => {
       createGallery(response.data);
     })
-    .catch(error => {
-      // console.log(error);
+    .catch(() => {
       iziToastMes('Reviews not found');
-      const gallery = document.querySelector('.swiper-wrapper'); 
+      const gallery = document.querySelector('.swiper-wrapper');
       gallery.insertAdjacentHTML(
         'beforeend',
         '<li class="not-found"><p class="not-found-text">Not Found</p></li>'
@@ -27,7 +49,7 @@ export async function loadReviews() {
 }
 
 function createGallery(data) {
-  const gallery = document.querySelector('.swiper-wrapper');  
+  const gallery = document.querySelector('.swiper-wrapper');
   let markup = data
     .map(
       slide => `
@@ -45,13 +67,13 @@ function createGallery(data) {
   gallery.insertAdjacentHTML('beforeend', markup);
 }
 
-export function launchSwiper() {  
+function launchSwiper() {
   const swiper = new Swiper('.swiper', {
-    modules: [Navigation, Pagination, Keyboard, Mousewheel],    
+    modules: [Navigation, Keyboard, Mousewheel],
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },    
+      nextEl: '.reviews-button-next',
+      prevEl: '.reviews-button-prev',
+    },
     keyboard: {
       enabled: true,
       onlyInViewport: false,
